@@ -1,0 +1,177 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Font options
+\usepackage{sourcesanspro}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}
+\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{
+\begin{itemize}[leftmargin=0.15in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Aly Raffauf} \\
+  \small 470-512-1448 $|$
+  \href{mailto:alyraffauf@fastmail.com}{alyraffauf@fastmail.com} $|$
+  \href{https://linkedin.com/in/alyraffauf}{linkedin.com/in/alyraffauf} $|$
+  \href{https://github.com/alyraffauf}{github.com/alyraffauf}
+\end{center}
+
+\section{Summary}
+Versatile fanatic for cloud infrastructure, Linux system
+administration, and automation using Ansible, AWS, Nix, Docker, and
+Python. Recently shifted focus to managing hybrid cloud environments,
+building skills in software deployment, CI/CD, data analysis, and
+best DevOps practices. Relocating in summer 2025 to Philadelphia, PA.
+
+\section{Projects}
+\resumeSubHeadingList
+\resumeSubheading
+{\href{https://cute.haus}{cute.haus}}{May 2023 -- Present}
+{Hybrid Cloud Homelab}{AWS, Infrastructure as Code, CI/CD}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Provisioned and maintain a 5-node hybrid
+cloud (4 on-prem, 1 on EC2) using declarative Nix flake deployments.}
+\resumeItem{\textbullet\ Built CI/CD Actions pipelines with
+self-hosted runners on Docker, cutting manual deployments from >30min to <5min.}
+\resumeItem{\textbullet\ Established site‑to‑site WireGuard and
+private DNS, enabling seamless service discovery across VPC and LAN.}
+\resumeItem{\textbullet\ Integrated Prometheus + Grafana, Uptime
+Kuma, and Cloudwatch, achieving $>$99\% service availability for 15+ apps.}
+\resumeItem{\textbullet\ Automated encrypted S3/Backblaze backups
+with restic, retaining 30‑day point‑in‑time snapshots.}
+\resumeSubHeadingListEnd
+\resumeSubheading
+{\href{https://github.com/NixOS/nixpkgs}{nixpkgs}}{Feb 2024 -- Present}
+{Software Package Repository}{Linux, DevOps}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Squashed bugs, troubleshot build errors, and
+packaged software in the world's largest Linux + MacOS software repository.}
+\resumeSubHeadingListEnd
+% \resumeSubheading
+%     {Sentiment Analysis API}{Aug 2022 -- Dec 2022}
+%     {Natural Language Processing}{Python, Flask, NLTK, Hugging Face}
+%     \resumeSubHeadingList
+%         \resumeItem{\textbullet\ Built a RESTful API for sentiment
+% analysis of text data}
+%         \resumeItem{\textbullet\ Implemented pre-trained
+% transformer models using Hugging Face}
+%         \resumeItem{\textbullet\ Deployed the API on a cloud
+% platform for easy integration}
+%     \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSubHeadingList
+\resumeItem{\textbf{Cloud Platforms}: AWS (EC2, S3, VPC, IAM,
+CloudFormation, Route 53), Google Cloud (Compute Engine, Cloud Storage)}
+\resumeItem{\textbf{Containerization \& Orchestration}:
+Docker/Podman, Docker Compose, Kubernetes}
+\resumeItem{\textbf{Infrastructure as Code \& Automation}: Nix
+(flakes), Ansible, GitOps, CI/CD Pipelines (GitHub Actions)}
+\resumeItem{\textbf{Monitoring \& Observability}: Prometheus,
+Grafana, AWS CloudWatch, Loki}
+\resumeItem{\textbf{Operating Systems}: Linux (NixOS, Ubuntu, RHEL),
+macOS, Windows}
+\resumeItem{\textbf{Languages \& Scripting}: Python, Bash, Nix}
+\resumeSubHeadingListEnd
+
+% \section{Certifications}
+% \resumeSubHeadingList
+%   \resumeItem{\textbullet\ Amazon Web Services - Cloud Practitioner}
+%   \resumeItem{\textbullet\ Linux Professional Institute - Linux Essentials}
+% \resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingList
+\resumeSubheading
+{SEO Specialist}{Aug 2022 -- Present}
+{Atolls}{Atlanta, GA}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Developed internal ranking tool in Python to
+support editor page prioritization and optimization.}
+\resumeItem{\textbullet\ Implemented content strategies for 200+
+landing pages on white label \& in-house domains.}
+\resumeSubHeadingListEnd
+\resumeSubheading
+{Graduate Research Assistant}{Aug 2017 -- Dec 2020}
+{Georgia State University}{Atlanta, GA}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Developed cloud applications in Python for
+archiving and processing social media content for a research database.}
+\resumeItem{\textbullet\ Worked on the Global Health Discourses
+Project, developing visualizations of social network data based on health NGOs.}
+\resumeSubHeadingListEnd
+\resumeSubheading
+{Intern}{July 2017 -- December 2017}
+{SimpleShowing, Inc.}{Atlanta, GA}
+\resumeSubHeadingList
+\resumeItem{\textbullet\ Developed and deployed React.js apps to
+Google Cloud Platform.}
+\resumeItem{\textbullet\ Developed webscraper in Python to
+automatically build a CRM based on real estate listings.}
+\resumeItem{\textbullet\ Built an automated SMS-based marketing
+outreach tool in Python and deployed to GCP.}
+\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingList
+\resumeSubheading
+{Georgia State University}{Atlanta, GA}
+{M.A. in Anthropology}{Aug 2017 -- May 2019}
+\resumeSubheading
+{Georgia State University}{Atlanta, GA}
+{B.A. in Applied Linguistics}{Aug 2013 -- May 2017}
+\resumeSubHeadingListEnd
+
+\end{document}

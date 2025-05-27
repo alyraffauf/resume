@@ -1,0 +1,22 @@
+[[language]]
+auto-format = true
+formatter.command = "alejandra"
+language-servers = ["nixd"]
+name = "nix"
+
+[[language]]
+auto-format = true
+file-types = ["md", "markdown", "mdx"]
+formatter = { command = "prettier", args = [
+    "--stdin-filepath",
+    "%val{filename}",
+    "--parser",
+    "markdown",
+] }
+name = "markdown"
+
+[[language]]
+auto-format = true
+file-types = ["tex"]
+formatter = { command = "tex-fmt", args = ["%val{filename}"] }
+name = "latex"
