@@ -74,7 +74,7 @@
           packages = with pkgs; [
             alejandra
             nixd
-            nodePackage.sprettier
+            nodePackages.prettier
             tex-fmt
           ];
         };
