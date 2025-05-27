@@ -1,0 +1,44 @@
+name: build-resume
+
+on:
+  push:
+    # rebuild only when LaTeX or flake files change
+    paths:
+      - "**.tex"
+      - flake.nix
+      - flake.lock
+      - .github/workflows/build-resume.yml
+  workflow_dispatch: # allow manual runs
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  pdf:
+    name: Build résumé PDF
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      actions: write # needed by upload-artifact on Forgejo
+
+    steps:
+      - name: ⬇️  Checkout
+        uses: actions/checkout@v4
+
+      - name: 🛠️  Install Nix
+        # Determinate Systems' installer works on both GitHub & Forgejo
+        uses: DeterminateSystems/nix-installer-action@v9
+
+      - name: 📄 Build résumé
+        run: |
+          nix build --accept-flake-config -o result
+          ls -R result
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: result/pdf/*.pdf
+          if-no-files-found: error
