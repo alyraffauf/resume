@@ -40,5 +40,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: resume-pdf
-          path: result/pdf/*.pdf
+          path: result/*.pdf
           if-no-files-found: error
