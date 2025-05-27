@@ -37,7 +37,7 @@ jobs:
           ls -R result
 
       - name: 📦 Upload artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v3
         with:
           name: resume-pdf
           path: result/*.pdf
