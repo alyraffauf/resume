@@ -25,11 +25,11 @@ jobs:
 
     steps:
       - name: ⬇️  Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
 
       - name: 🛠️  Install Nix
         # Determinate Systems' installer works on both GitHub & Forgejo
-        uses: DeterminateSystems/nix-installer-action@v9
+        uses: DeterminateSystems/nix-installer-action@main
 
       - name: 📄 Build résumé
         run: |
@@ -37,7 +37,7 @@ jobs:
           ls -R result
 
       - name: 📦 Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@main
         with:
           name: resume-pdf
           path: result/pdf/*.pdf
